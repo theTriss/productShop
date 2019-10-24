@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900&display=swap');
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.pagination__title {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border: 2px solid #ccc;
+    color: rgb(1, 157, 180);
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    cursor: pointer;
+}
+
+.pagination__icon {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/fontawesome.png');
+    background-position: -813px -352px;
+    animation: none;
+}
+
+.pagination__icon_animate {
+    animation: preloader 1s linear infinite;
+}
+
+@keyframes preloader {
+    from{
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

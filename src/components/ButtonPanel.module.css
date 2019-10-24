@@ -1,0 +1,74 @@
+.buttonPanel {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttonPanel_market {
+    justify-content: center;
+}
+
+.counterButtons, .cartButton {
+    display: flex;
+    height: 40px;
+}
+
+.cartButton_cart {
+    display: none;
+}
+
+.counterButtons {
+    margin-bottom: 1em;
+}
+
+.counterButtons_productItem{
+    margin-right: 2em;
+}
+
+.counterButtons_cart {
+    margin-bottom: 0;
+}
+
+.cartButton__btn, .counterButtons__btn {
+    cursor: pointer;
+}
+
+.cartButton__btn {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 1.2em;
+    background-color:rgb(255, 126, 31);
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.cartButton__btn_cart {
+    background-color: #eee;
+}
+
+.counterButtons__btn {
+    width: 40px;
+    border: none;
+    outline: none;
+    background: url('../common/img/fontawesome.png');
+    background-color: #ccc;
+    box-shadow: 0 0 0 1px #ccc;
+}
+
+.counterButtons__btn_increment {
+    background-position: -192px -350px;
+}
+
+.counterButtons__btn_decrement {
+    background-position: -316px -308px;
+}
+
+.counterButtons__input {
+    width: 100px;
+    text-align: center;
+    font-size: 1.5em;
+    border: none;
+    background-color: #eee;
+    z-index: 1;
+} 

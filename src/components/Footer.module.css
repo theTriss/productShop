@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Neucha&display=swap');
+
+.footer {
+    display: grid;
+    grid-template: auto 50px / repeat(3, minmax(max-content, 200px));
+    grid-template-areas: 'nav contacts schedule'
+                        'years years years';
+    padding: 20px;
+    background-color: rgb(1, 157, 180);
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'Neucha', cursive;
+}
+
+.footer__nav {
+    grid-area: nav;
+}
+
+.footer__contacts {
+    grid-area: contacts;
+}
+
+.footer__schedule {
+    grid-area: schedule;
+}
+
+.footer__years {
+    grid-area: years;
+    align-self: center;
+}
+
+.footer__link {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.footer__title {
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 600px) {
+    .footer{ 
+        grid-template: repeat(4, auto) / auto;
+        grid-template-areas: 'nav'
+                            'contacts'
+                            'schedule'
+                            'years';
+        grid-row-gap: .5em;
+        padding: 20px 0;
+        font-size: 1em;
+    }
+
+    .footer__nav, .footer__contacts, .footer__schedule, .footer__years {
+        display: flex;
+        justify-self: center;
+    }
+
+    .footer__link {
+        font-size: 1.3em;
+        margin-right: .5em;
+    }
+
+    .footer__title {
+        margin-right: .5em;
+        font-size: 1.3em;
+    }
+
+    .footer__contactItem, .footer__scheduleItem {
+        align-self: center;
+    }
+
+    .footer__yearsItem {
+        text-align: center;
+    }
+}

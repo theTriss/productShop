@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
+
+.product {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    padding: 2em;
+}
+
+.product__imgSection {
+
+}
+
+.product__img {
+    max-height: 400px;
+    width: 100%;
+}
+
+.products__descriptionSection {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.product__descriptionTitle {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.product__title, .product__price {
+    font-size: 2em;
+}
+
+.product__price {
+    margin: .5em 0;
+    color: rgb(255, 126, 31);
+    font-weight: 700;
+}
+
+.product__weight, .product__composition {
+    margin-bottom: .5em;
+}
+
+.product__nutritionalTable {
+    margin-bottom: 1.5em;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.product__nutritionalColumn {
+    padding: 5px;
+    border: 1px solid #fff
+}
+
+.product__nutritionalColumn:nth-child(even) {
+    text-align: center;
+}
+
+.product__nutritionalRow {
+    background-color: #eee;
+}
+
+.product__nutritionalRow:nth-child(even) {
+    background-color: #ccc;
+}
+
+.product__btn {
+
+}
+
+@media screen and (max-width: 760px) {
+    .product{
+        grid-template: repeat(2, auto) / 1fr;
+    }
+    
+    .product__imgSection {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    
+}

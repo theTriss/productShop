@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
+
+.cartSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.producItem {
+    display: grid;
+    grid-template: 150px /  150px 3fr 1fr 2fr 50px;
+    grid-template-areas: 'img title price counter button';
+    margin-bottom: 2em;
+    align-items: center;
+    grid-column-gap: .5em;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.producItem__title, .producItem__price {
+    text-align: center;
+}
+
+.producItem__title {
+    grid-area: title;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: rgb(255, 126, 31);
+}
+
+.producItem__imgSection {
+    grid-area: img;
+    align-self: flex-start;
+}
+
+.producItem__img {
+    width: 100%; 
+}
+
+.producItem__price {
+    grid-area: price;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.producItem__counter {
+    grid-area: counter;
+    justify-self: center;
+}
+
+.producItem__button {
+    grid-area: button;
+    width: 35px;
+    height: 35px;
+    justify-self: center;
+    background: url('../common/img/fontawesome.png');
+    background-position: 113px -483px;
+    border: none;
+    border: 2px solid rgb(177, 85, 20);
+    outline: none;
+    background-color: rgb(255, 126, 31);
+    cursor: pointer;
+}
+
+.cart__imgSection {
+    text-align: center;
+}
+
+.cart__totalPrice {
+    text-align: center;
+    font: 1.5em 'Exo 2';
+    font-weight: 700;
+}
+
+@media screen and (max-width: 760px) {
+    .producItem {
+        grid-template: repeat(2, 75px) / 150px repeat(2, 1fr) 50px;
+        grid-template-areas: 'img title title button'
+                            'img price counter button';
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cart__img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .producItem {
+        grid-template: 50px 200px 50px auto / 1fr 50px;
+        grid-template-areas:'title button' 
+                            'img .'
+                            'price .'
+                            'counter .';
+        grid-column-gap: 0;
+    }
+
+    .producItem__imgSection {
+        width: 200px;
+        justify-self: center;
+    }
+}

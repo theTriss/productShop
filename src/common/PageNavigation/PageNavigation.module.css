@@ -1,0 +1,12 @@
+.navigationSection {
+    padding: 1em 0;
+    text-transform: uppercase;
+}
+
+.link {
+    color: rgb(255, 126, 31);
+}
+
+.activeLink {
+    color: #000;
+}
